@@ -135,6 +135,7 @@ int main() {
     of.createOperate(MUL, 100, 20);
     of.createOperate(DIV, 100, 20);
 
-    //system("pause");
+    //system("pause");   
+    //20220626
     return 0;
 }
