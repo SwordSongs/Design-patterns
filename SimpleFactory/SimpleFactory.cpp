@@ -95,7 +95,7 @@ string getOp(Aoperator oper) {
     }
 }
 
-class OperationFactory {
+class OperationFactory {     //wd注：简单工厂的选择判断逻辑在工厂那个类内部，添加分支修改破坏了【开放-封闭】原则，故而有了进一步抽象出来了工厂方法模式
 public:
     static void createOperate(Aoperator oper, double numberA, double numberB) {
         Operation* op = NULL;
