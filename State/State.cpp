@@ -38,7 +38,7 @@ public:
     }
 
 private:
-    State* current;
+    State* current;   
     double hour;
     bool finish;
 };
@@ -59,7 +59,7 @@ public:
             cout << "当前时间：" << w->getHour() << ", 要睡着了。" << endl;
         }
         else {                     //add
-            w->setState(new ResetState());
+            w->setState(new ResetState());   //注意w.current需要指向new空间，否则析构和setState会出问题
             w->writeProgram();
         }
 
