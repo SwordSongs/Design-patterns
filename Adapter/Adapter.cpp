@@ -93,11 +93,16 @@ class ChineseCenter :public ChinesePlayer {
 //  ≈‰’ﬂ ∑≠“Î
 class Translator : Player {
     public:
-        Translator(string adapter, string adaptee) : Player(adapter){
-            cc = new ChineseCenter(adaptee);
+        Translator(string adapter, string adaptee) : Player(adapter), cc(NULL){
+            if(cc == NULL){
+                cc = new ChineseCenter(adaptee);
+            }
         }
         ~Translator(){
-            if (cc) delete cc;
+            if (cc){
+                delete cc;
+                cc = NULL;
+            } 
         }
 
         void attack() {
