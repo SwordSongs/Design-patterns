@@ -76,5 +76,6 @@ int main()
 
     delete fus;
 
+    system("pause");
     return 0;
 }
